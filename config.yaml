@@ -1,5 +1,5 @@
 # Dataset a procesar (sin extensión .xlsx)
-dataset_name: "Revisión de los delitos Agosto"
+dataset_name: "Revisión de los Delitos Agosto"
 
 # Configuración de API
 api:

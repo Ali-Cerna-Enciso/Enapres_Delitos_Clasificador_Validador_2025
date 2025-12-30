@@ -41,12 +41,10 @@ logs/
 *.log
 
 # Prompts y conocimiento base (solo versión de ejemplo pública)
-src/prompts/
-!src/prompts/crime_validation_prompts.py
-!src/prompts/versions/
 src/prompts/versions/*
 !src/prompts/versions/v3.py
 !src/prompts/versions/__init__.py
+!src/prompts/crime_validation_prompts.py
 
 # Data files (no subir datos sensibles)
 data/raw/*.xlsx

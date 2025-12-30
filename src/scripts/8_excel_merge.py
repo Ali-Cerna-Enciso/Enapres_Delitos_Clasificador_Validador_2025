@@ -179,7 +179,8 @@ class ExcelMerger:
             new_col_name = f"{col}_new"
             if new_col_name in df_merged.columns:
                 # Actualizar valores donde hay datos del análisis (sobrescribir con nuevos datos)
-                df_merged[col] = df_merged[new_col_name].combine_first(df_merged[col])
+                # Primero crear una copia de la columna original y luego combinar
+                df_merged[col] = df_merged[new_col_name].where(df_merged[new_col_name].notna(), df_merged[col])
                 # Eliminar la columna temporal con sufijo _new
                 df_merged = df_merged.drop(columns=[new_col_name])
 
