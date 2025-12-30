@@ -184,18 +184,12 @@ class ExcelMerger:
                 # Eliminar la columna temporal con sufijo _new
                 df_merged = df_merged.drop(columns=[new_col_name])
 
-        # Rellenar filas no procesadas con el código 4 (Falta de observación)
-        # Solo rellenar si la columna existe (podría venir del original o ser nueva)
         if 'ESTADO_REVISION' in df_merged.columns:
             df_merged['ESTADO_REVISION'] = df_merged['ESTADO_REVISION'].fillna(4)
 
-        # Eliminar columna ID duplicada del análisis
         if self.analysis_id_column != self.id_column:
             df_merged = df_merged.drop(columns=[self.analysis_id_column])
-
-        # Eliminar la columna ID_DELITO_IA temporal creada para el merge
-        #df_merged = df_merged.drop(columns=[self.id_column])
-
+            
         return df_merged
     
     def apply_conditional_formatting(self, excel_path):
