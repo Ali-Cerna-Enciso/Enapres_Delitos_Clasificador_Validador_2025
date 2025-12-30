@@ -1,0 +1,46 @@
+# Dataset a procesar (sin extensión .xlsx)
+dataset_name: "Revisión de los delitos Agosto"
+
+# Configuración de API
+api:
+  model_name: "deepseek-chat"
+  base_url: "https://api.deepseek.com/v1"
+  temperature: 0.1
+  max_tokens: 1000
+  top_p: 0.9
+  timeout: 90
+  max_retries: 3
+  retry_delay: 60
+
+# Parámetros de procesamiento
+processing:
+  batch_size: 350               # Tamaño de lote para API
+  memory_cleanup_every: 5       # Limpieza de memoria cada N lotes
+  pattern_min_count: 10         # Mínimo de repeticiones para eliminar patrón
+  pattern_min_percent: 5.0      # Mínimo porcentaje para eliminar patrón (%)
+
+# Modo de procesamiento
+data_processing:
+  # "complex": Datos ENAPRES con múltiples columnas de ID (HOGAR, P201, ID, P424_ID)
+  # "simple": Excel plano con columna de ID única
+  mode: "complex"                # Modo de procesamiento: "complex" o "simple"
+  
+  # ========== MODO COMPLEX (ENAPRES) ==========
+  # Columnas que se combinan para crear el ID_DELITO_IA
+  complex:
+    id_components: ["HOGAR", "P201", "ID", "P424_ID"]
+    excel_text_column: "OBS_400A"          # Columna de observación
+    excel_code_column: "P424_ID"           # Columna de código esperado (delito del hogar)
+  
+  # ========== MODO SIMPLE (Excel plano) ==========
+  # Columna única de ID directo (sin combinar)
+  simple:
+    id_column: "ID"                        # Columna de ID único
+    code_column: null                      # (OPCIONAL) Columna de código - NULL en modo simple puro
+    text_column: "DESCRIPCION1"            # Columna de observación
+
+# Versión de prompts
+prompts:
+  version: "1"                             # Versión de prompts a usar: "1" o "2"
+  # "1": Clasificación automática de delitos (KnowledgeBaseV1)
+  # "2": Metodología - Orientación para encuestadores (KnowledgeBaseV2)

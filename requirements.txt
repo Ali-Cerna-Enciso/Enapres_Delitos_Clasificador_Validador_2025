@@ -1,0 +1,24 @@
+# Enapres-delitos-validator - Dependencias del Proyecto
+# Sistema de validación de consistencia entre respuestas categóricas y narrativas
+
+# === DEPENDENCIAS PRINCIPALES ===
+
+# Manipulación de datos y análisis
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Procesamiento de archivos Excel
+openpyxl>=3.0.0
+
+# API y cliente asíncrono
+openai>=1.3.0
+
+# Barra de progreso para procesamiento asíncrono
+tqdm>=4.66.0
+
+# Lectura de archivos de configuración YAML
+PyYAML>=6.0.0
+
+# Carga de variables de entorno desde archivos .env
+python-dotenv>=1.0.0
+

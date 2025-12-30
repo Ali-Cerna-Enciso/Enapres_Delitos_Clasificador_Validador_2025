@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+build/
+dist/
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.local
+.envrc
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Package managers
+.ruff_cache/
+.mypy_cache/
+
+# Logs
+logs/
+*.log
+
+# Prompts y conocimiento base (solo versión de ejemplo pública)
+src/prompts/
+!src/prompts/crime_validation_prompts.py
+!src/prompts/versions/
+src/prompts/versions/*
+!src/prompts/versions/v3.py
+!src/prompts/versions/__init__.py
+
+# Data files (no subir datos sensibles)
+data/raw/*.xlsx
+data/raw/*.xls
+data/raw/*.csv
+
+# Resultados y datos procesados (mantener estructura vacía)
+data/results/*
+!data/results/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Backup files
+backup_*/
