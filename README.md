@@ -47,9 +47,9 @@ Enapres-delitos-validator/
 │   │   └── 8_excel_merge.py             # Fusiona con archivo original
 │   │
 │   ├── 📁 validation/                   # 🧪 Herramientas de validación
-   │   ├── Test_Api.py                  # Validador de API con análisis de consistencia
-│   │   ├── ver_prompt.py                # Documenta flujo entrada/salida
-│   │   └── error_analyzer_results.py    # Análisis avanzado de errores
+   │   ├── Test_Api.py                  # Validador de API con análisis de consitencia
+│   │  └── ver_prompt.py                # Documenta flujo entrada/salida
+│   │   
 │   │
 │   └── main.py                          # 🎯 Orquestador del pipeline
 │
