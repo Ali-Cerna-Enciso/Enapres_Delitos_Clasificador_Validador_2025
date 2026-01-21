@@ -304,7 +304,15 @@ Para reportar problemas o sugerencias:
 
 ---
 
-## 📄 Licencia
+## � Autor
+
+Desarrollado por **Ali Cerna Enciso**, analista de datos especializado en seguridad ciudadana y procesamiento de encuestas.
+
+- GitHub: [@Ali-Cerna-Enciso](https://github.com/Ali-Cerna-Enciso)
+
+---
+
+## �📄 Licencia
 
 Ver archivo [LICENSE](LICENSE)
 
